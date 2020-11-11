@@ -15,6 +15,7 @@ Test
     Open Shopping Cart
     Checkout
     Type Information
+    Overview
 
 *** Keywords ***
 Prepare Browser
@@ -49,4 +50,8 @@ Type Information
     Input Text      id=last-name    123
     Input Text      id=postal-code  123
     Submit Form
+
+Overview
+    Wait Until Page Contains Element    xpath=//div[@class='cart_footer' and contains(.,'FINISH')]//a
+    Click Element   xpath=//div[@class='cart_footer']//a[contains(.,'FINISH')]
 
