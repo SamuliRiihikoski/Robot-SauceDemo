@@ -16,12 +16,14 @@ TWINS
     Verify Solved
 
 Math
-    [Tags]  32403
-    ${first}     Get Text    id=no1
-    ${second}     Get Text    id=no2
-    ${operator}   Get Text    id=symbol1
-    ${result}     Evaluate    ${first}${operator}${second}
+    [Tags]      32403
+    Wait Until Element Is Visible   xpath=//label[@id='no1']
+    ${first}      Get Text      id=no1
+    ${second}     Get Text      id=no2
+    ${symbol}     Get Text      id=symbol1
+    ${result}     Evaluate      ${first}${symbol}${second}
     Input Text      id=result       ${result}
+    Log To Console  first: ${first}
 
 Wait a moment
     [Tags]  33678
@@ -29,7 +31,7 @@ Wait a moment
     Wait Until Element Is Enabled   id=two      2 minutes
     Click Button    id=two
 
-table search
-    [Tags]  41036   EI-VALMIS   #Xpath ei jostain syystä toimi automaatiossa
-    ${result}   Run Keyword And Return Status   table should contain    randomTable     15    
+Table Search
+    [Tags]  41036 
+    ${result}   Run Keyword And Return Status   Table Should Contain    id=randomTable     15    
     Input Text   id=resulttext   ${result}
