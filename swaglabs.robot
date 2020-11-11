@@ -14,7 +14,7 @@ Test
     Add Product     jacket
     Open Shopping Cart
     Checkout
-    
+    Type Information
 
 *** Keywords ***
 Prepare Browser
@@ -41,3 +41,12 @@ Open Shopping Cart
 Checkout
     Wait Until Page Contains Element    xpath=//div[@id='cart_contents_container']//a
     Click Element   xpath=//div[@id='cart_contents_container']//a[contains(.,'CHECKOUT')]
+
+Type Information
+    [Arguments]
+    Wait Until Page Contains Element    id=first-name
+    Input Text      id=first-name   123
+    Input Text      id=last-name    123
+    Input Text      id=postal-code  123
+    Submit Form
+
