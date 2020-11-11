@@ -1,2 +1,3 @@
 # Robot-SauceDemo
-Ohjelmistosuunnittelun harjoitus
+Ohjelmistosuunnittelun harjoitus, missä Robot Frameworkin avulla tehdään automaatiotestausta 
+
