@@ -38,9 +38,8 @@ Table Search
 
 Tricentis Tosca Olympics 
 
-# Its fails some cases. Maybe delay issue.
-# Passes if player pass only one tree and then moves other side
-# Fails more often when Player stays longer time in one side and passes many
+# Test fails when player is on one side and passes 5 or more trees without changing the side.
+# after 5 trees player will not move to other side and crash! happens.
 
     [Tags]  82018
     
