@@ -41,17 +41,21 @@ Tricentis Tosca Olympics
     
     Wait Until Page Contains Element     xpath=//a[@id='start']
     Click Element    xpath=//a[@id='start']
-
     Wait Until Page Contains Element    xpath=//div[@class='instructions']
     
-
     Wait Until Element Does Not Contain  xpath=//div[@class='instructions']   Prepare for the start!
-    ${final}    Get Text    xpath=//div[@class='instructions']
-    Log To Console   ${final}
+    ${action}    Get Text    xpath=//div[@class='instructions']
 
-    Run Keyword If  '${final}'=='Go right!'    Press Keys    ARROW_RIGHT
-    Run Keyword If  '${final}'=='Go left!'     Press Keys    ARROW_LEFT
+    Run Keyword If  '${action}'=='Go right!'    Move Player     ARROW_RIGHT     ${action}
+    Run Keyword If  '${action}'=='Go left!'     Move Player     ARROW_LEFT      ${action}
+  
+*** Keywords ***
 
-    
-    
-      
+Move Player
+    [Arguments]     ${keyPress}     ${action}
+    Press Keys   None    ${keyPress}
+
+    Wait Until Element Does Not Contain  xpath=//div[@class='instructions']   ${action}
+    ${action}    Get Text    xpath=//div[@class='instructions']
+    Run Keyword If  '${action}'=='Go right!'    Move Player     ARROW_RIGHT     ${action}
+    Run Keyword If  '${action}'=='Go left!'     Move Player     ARROW_LEFT      ${action}
