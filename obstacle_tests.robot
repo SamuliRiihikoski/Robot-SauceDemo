@@ -49,8 +49,8 @@ Tricentis Tosca Olympics
     ${final}    Get Text    xpath=//div[@class='instructions']
     Log To Console   ${final}
 
-    Run Keyword If  '${final}'=='Go right!'    Press Keys    ARROR_RIGHT
-    Run Keyword If  '${final}'=='Go left!'     Press Keys    ARROR_LEFT
+    Run Keyword If  '${final}'=='Go right!'    Press Keys    ARROW_RIGHT
+    Run Keyword If  '${final}'=='Go left!'     Press Keys    ARROW_LEFT
 
     
     
