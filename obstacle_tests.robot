@@ -36,7 +36,12 @@ Table Search
     ${result}   Run Keyword And Return Status   Table Should Contain    id=randomTable     15    
     Input Text   id=resulttext   ${result}
 
-Tricentis Tosca Olympics
+Tricentis Tosca Olympics 
+
+# Its fails some cases. Maybe delay issue.
+# Passes if player pass only one tree and then moves other side
+# Fails more often when Player stays longer time in one side and passes many trees
+
     [Tags]  82018
     
     Wait Until Page Contains Element     xpath=//a[@id='start']
