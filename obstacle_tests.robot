@@ -40,7 +40,7 @@ Tricentis Tosca Olympics
 
 # Its fails some cases. Maybe delay issue.
 # Passes if player pass only one tree and then moves other side
-# Fails more often when Player stays longer time in one side and passes many trees
+# Fails more often when Player stays longer time in one side and passes many
 
     [Tags]  82018
     
@@ -51,8 +51,7 @@ Tricentis Tosca Olympics
     Wait Until Element Does Not Contain  xpath=//div[@class='instructions']   Prepare for the start!
     ${action}    Get Text    xpath=//div[@class='instructions']
 
-    Run Keyword If  '${action}'=='Go right!'    Move Player     ARROW_RIGHT     ${action}
-    Run Keyword If  '${action}'=='Go left!'     Move Player     ARROW_LEFT      ${action}
+    Move Player  None  Start
   
 *** Keywords ***
 
