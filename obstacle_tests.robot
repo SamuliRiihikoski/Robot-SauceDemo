@@ -35,3 +35,23 @@ Table Search
     [Tags]  41036 
     ${result}   Run Keyword And Return Status   Table Should Contain    id=randomTable     15    
     Input Text   id=resulttext   ${result}
+
+Tricentis Tosca Olympics
+    [Tags]  82018
+    
+    Wait Until Page Contains Element     xpath=//a[@id='start']
+    Click Element    xpath=//a[@id='start']
+
+    Wait Until Page Contains Element    xpath=//div[@class='instructions']
+    
+
+    Wait Until Element Does Not Contain  xpath=//div[@class='instructions']   Prepare for the start!
+    ${final}    Get Text    xpath=//div[@class='instructions']
+    Log To Console   ${final}
+
+    Run Keyword If  '${final}'=='Go right!'    Press Keys    ARROR_RIGHT
+    Run Keyword If  '${final}'=='Go left!'     Press Keys    ARROR_LEFT
+
+    
+    
+      
