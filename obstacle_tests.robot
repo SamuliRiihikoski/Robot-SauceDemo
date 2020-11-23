@@ -51,7 +51,10 @@ Tricentis Tosca Olympics
     ${action}    Get Text    xpath=//div[@class='instructions']
 
     Move Player  None  Start
-  
+
+Find And Fill
+    [Tags]  73590 
+
 *** Keywords ***
 
 Move Player
