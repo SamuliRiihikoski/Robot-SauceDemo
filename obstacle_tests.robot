@@ -55,6 +55,10 @@ Tricentis Tosca Olympics
 Find And Fill
     [Tags]  73590 
 
+    Wait Until Page Contains Element    xpath=//input[@placeholder='User']
+    Input Text      xpath=//div[@id='form']//input[@placeholder='User']    User
+
+
 *** Keywords ***
 
 Move Player
