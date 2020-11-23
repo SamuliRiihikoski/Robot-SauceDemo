@@ -55,11 +55,12 @@ Tricentis Tosca Olympics
 Find And Fill
     [Tags]  73590 
 
-    Wait Until Page Contains Element    xpath=//input[@placeholder='User']
+    Wait Until Page Contains Element     xpath=//input[@id='pass']
     Input Text      xpath=//div[@id='form']//input[@placeholder='User']    User
     Input Text      xpath=//div[@id='form']//input[@placeholder='Pass']    ABC
 
-
+    Wait Until Element is Visible    id=sample
+    Click Element     id=sample
 
 *** Keywords ***
 
