@@ -39,7 +39,7 @@ Table Search
 Tricentis Tosca Olympics 
 
 # Test fails when player is on one side and passes 5 or more trees without changing the side.
-# after 5 trees player will not move to other side and crash! happens.
+# after 5 trees player will not move to other side and crash! happens. Why oh why?
 
     [Tags]  82018
     
