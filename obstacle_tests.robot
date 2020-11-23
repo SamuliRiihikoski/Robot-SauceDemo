@@ -57,6 +57,8 @@ Find And Fill
 
     Wait Until Page Contains Element    xpath=//input[@placeholder='User']
     Input Text      xpath=//div[@id='form']//input[@placeholder='User']    User
+    Input Text      xpath=//div[@id='form']//input[@placeholder='Pass']    ABC
+
 
 
 *** Keywords ***
