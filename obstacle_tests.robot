@@ -61,6 +61,10 @@ Addition
     Input Text      id=result       ${result}
     Log To Console  first: ${first}
 
+Escape
+    [Tags]  41041
+    Wait Until Element Is Visible   xpath=//input[@id='resulttext']
+    Input Text  xpath=//input[@id='resulttext']     {Click}
 
 
 *** Keywords ***
