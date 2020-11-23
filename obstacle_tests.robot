@@ -61,6 +61,10 @@ Addition
     Input Text      id=result       ${result}
     Log To Console  first: ${first}
 
+Hidden element
+    [Tags]  66666
+    Wait Until Page Contains Element    xpath=//span[@id="clickthis"]
+    Click Element    id=clickthis
 
 
 *** Keywords ***
