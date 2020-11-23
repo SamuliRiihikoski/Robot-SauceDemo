@@ -52,6 +52,17 @@ Tricentis Tosca Olympics
 
     Move Player  None  Start
   
+Addition
+    [Tags]  78264
+    Wait Until Element Is Visible   xpath=//label[@id='no1']
+    ${first}      Get Text      id=no1
+    ${second}     Get Text      id=no2
+    ${result}     Evaluate      ${first}+${second}
+    Input Text      id=result       ${result}
+    Log To Console  first: ${first}
+
+
+
 *** Keywords ***
 
 Move Player
