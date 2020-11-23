@@ -61,10 +61,17 @@ Addition
     Input Text      id=result       ${result}
     Log To Console  first: ${first}
 
+<<<<<<< HEAD
 Hidden element
     [Tags]  66666
     Wait Until Page Contains Element    xpath=//span[@id="clickthis"]
     Click Element    id=clickthis
+=======
+Escape
+    [Tags]  41041
+    Wait Until Element Is Visible   xpath=//input[@id='resulttext']
+    Input Text  xpath=//input[@id='resulttext']     {Click}
+>>>>>>> escape
 
 
 *** Keywords ***
